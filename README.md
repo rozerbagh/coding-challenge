@@ -88,3 +88,18 @@ The sample also includes a commented AWS SES SMTP alternative. PostgreSQL settin
 ## Scope notes
 
 The supplied challenge PDF and pasted brief were reviewed. The PDF requires an AWS-compatible path when infrastructure is included, replaceable product data and email providers, and a committed `.env.example`; it does not require a database or a particular paid production service. PostgreSQL remains future work. Resend is now integrated as a selectable email provider; account setup and a verified sender domain are required to send through it. See [PHASE1_PLAN.md](PHASE1_PLAN.md), [DECISIONS.md](DECISIONS.md), and [AI_USAGE.md](AI_USAGE.md) for decisions and implementation notes.
+
+
+# For Testing use the below API KEY
+```
+import { Resend } from 'resend';
+
+const resend = new Resend('re_H1xEW4Z5_aJP2uYjqmo3qKJAtYjLWswXB');
+
+resend.emails.send({
+  from: 'onboarding@resend.dev',
+  to: 'rozerbagh456@gmail.com',
+  subject: 'Hello World',
+  html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
+});
+```

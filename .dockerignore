@@ -1,0 +1,12 @@
+.git
+**/.git
+**/node_modules
+**/.next
+**/dist
+**/coverage
+.env
+.env.*
+!.env.example
+README.md
+PHASE1_PLAN.md
+AGENTS.md
